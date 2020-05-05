@@ -28,6 +28,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunManager">
     <configuration name="mutacritic" type="Python.AppEngineServer" factoryName="App Engine server">
@@ -57,7 +58,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1588698650357</updated>
-      <workItem from="1588698651746" duration="374000" />
+      <workItem from="1588698651746" duration="1068000" />
     </task>
     <servers />
   </component>
@@ -65,24 +66,36 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="914" height="281" key="GridCell.Tab.0.bottom" timestamp="1588699116526">
+    <state x="673" y="177" key="#Notifications" timestamp="1588699719783">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588699116526" />
-    <state width="914" height="281" key="GridCell.Tab.0.center" timestamp="1588699116525">
+    <state x="673" y="177" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1588699719783" />
+    <state x="861" y="274" key="FileChooserDialogImpl" timestamp="1588699473401">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588699116525" />
-    <state width="914" height="281" key="GridCell.Tab.0.left" timestamp="1588699116525">
+    <state x="861" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1588699473401" />
+    <state width="914" height="281" key="GridCell.Tab.0.bottom" timestamp="1588699695862">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588699116525" />
-    <state width="914" height="281" key="GridCell.Tab.0.right" timestamp="1588699116526">
+    <state width="914" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588699695862" />
+    <state width="914" height="281" key="GridCell.Tab.0.center" timestamp="1588699695862">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588699116526" />
+    <state width="914" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588699695862" />
+    <state width="914" height="281" key="GridCell.Tab.0.left" timestamp="1588699695862">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588699695862" />
+    <state width="914" height="281" key="GridCell.Tab.0.right" timestamp="1588699695862">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="914" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588699695862" />
+    <state x="584" y="161" key="SettingsEditor" timestamp="1588699689897">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="584" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588699689897" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/mutacritic$mutacritic.coverage" NAME="mutacritic Coverage Results" MODIFIED="1588699095380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/mutacritic$mutacritic.coverage" NAME="mutacritic Coverage Results" MODIFIED="1588699695853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
