@@ -14,8 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+
+
 import webapp2
 from webapp2_extras import jinja2
+
 
 from model.videojuego import Videojuego
 
