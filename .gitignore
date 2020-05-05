@@ -1,0 +1,11 @@
+# Backups
+*~
+*.bak
+# Binarios
+*.exe
+*.dll
+bin/
+obj/
+.idea/workspace.xml
+# Preferencias del usuario
+*.userprefs
