@@ -1,3 +1,4 @@
+# coding: utf-8
 # Comentario de los usuarios sobre el videojuego, con valoración
 
 

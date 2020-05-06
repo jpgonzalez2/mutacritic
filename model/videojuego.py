@@ -1,3 +1,4 @@
+# coding: utf-8
 # Videojuego con una puntuación total y una descripción
 
 
