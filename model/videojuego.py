@@ -6,6 +6,6 @@ from google.appengine.ext import ndb
 
 
 class Videojuego(ndb.Model):
-    nombre = ndb.StringProperty(indexed=True)
+    titulo = ndb.StringProperty(indexed=True)
     puntuacion = ndb.IntegerProperty()
     descripcion = ndb.StringProperty(required=True)

@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aa59af7-9447-43b8-b5f6-0605a3bb657a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/nuevo_videojuego.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/comentario.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/comentario.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/handlers/videojuegos/nuevo.py" beforeDir="false" afterPath="$PROJECT_DIR$/handlers/videojuegos/nuevo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/videojuego.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/videojuego.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
@@ -24,6 +27,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1bUtlX7y1I7Wzlz6dAzzVit4rBt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -40,6 +46,11 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Home\Documents\GitHub\mutacritic\handlers" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="mutacritic" type="Python.AppEngineServer" factoryName="App Engine server">
@@ -71,7 +82,7 @@
       <updated>1588698650357</updated>
       <workItem from="1588698651746" duration="2027000" />
       <workItem from="1588715152231" duration="100000" />
-      <workItem from="1588759495803" duration="396000" />
+      <workItem from="1588759495803" duration="3934000" />
     </task>
     <servers />
   </component>

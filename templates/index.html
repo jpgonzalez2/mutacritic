@@ -5,17 +5,21 @@
     <title>Mutacritic</title>
 </head>
 <body>
+        <h1>Lista de videojuegos</h1>
+        
+        <p>
+        <a href="/videojuegos/nuevo">Añadir videojuego</a>
+        </p>
+
     {% if videojuegos.count() > 0 %}
         {% for videojuego in videojuegos %}
             <a href="comentarios/list?id={{ videojuego.key.urlsafe() }}">
-            <b>{{ videojuego.nombre}}</b> </a> {{videojuego.puntuacion}}
+            <b>{{ videojuego.titulo}}</b> </a> {{videojuego.puntuacion}}
             (<a href="videojuegos/elimina?id={{ videojuego.key.urlsafe() }}">Borrar</a>)
             (<a href="videojuegos/modifica?id={{ videojuego.key.urlsafe() }}">Editar</a>)
         {% endfor %}
     {% else %}
         <p><b>No hay videojuegos para valorar</b></p>
     {% endif %}
-
-    <a href="/videojuegos/nuevo">Añadir videojuego</a>
 </body>
 </html>

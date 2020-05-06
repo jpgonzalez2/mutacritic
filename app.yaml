@@ -12,6 +12,9 @@ handlers:
 - url: /
   script: handlers.main.app
 
+- url: /videojuegos/nuevo
+  script: handlers.videojuegos.nuevo.app
+
 libraries:
 - name: webapp2
   version: "2.5.2"

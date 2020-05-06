@@ -25,7 +25,7 @@ from model.videojuego import Videojuego
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        videojuegos = Videojuego.query().order(Videojuego.nombre)
+        videojuegos = Videojuego.query().order(Videojuego.titulo)
 
         valores_plantilla = {
             "videojuegos": videojuegos
