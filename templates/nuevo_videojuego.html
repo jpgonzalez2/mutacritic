@@ -1,43 +1,38 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Mutacritic: Nuevo videojuego</title>
-    
-    <script>
-        function check()
-        {
-            const edTitulo = document.getElementById( "edTitulo" );
-            const edDescripcion = document.getElementById( "edDescripcion" );
+{% extends "esqueleto.html" %}
 
-            return ( edTitulo.value.trim().length > 0
-                  && edDescripcion.value.trim().length > 0 );
-        }
-        
-    </script>
-</head>
-<body>
-    <form id="frmNuevoVideojuego"
-          method="post"
-          action="/videojuegos/nuevo"
-          onsubmit="return check()">
+{% block contenido %}
+<form id="frmNuevoVideojuego"
+      method="post"
+      action="/videojuegos/nuevo"
+      onsubmit="return check()">
 
-        <h1>Nuevo videojuego</h1>
+    <h1>Nuevo videojuego</h1>
 
-        <p>
+    <p>
         <label for="edTitulo">Título: </label>
         <input type="string" id="edTitulo" name="edTitulo"
                 placeholder="Super Mario Bros"/>
-        </p>
+    </p>
 
-        <p>
+    <p>
         <label for="edDescripcion">Descripción: </label>
         <textarea rows="10" cols="50" id="edDescripcion" name="edDescripcion"
                   placeholder="El mejor juego de Mario, increíbles gráficos"></textarea>
-        </p>
+    </p>
 
-        <p><input type="submit" value="Añadir"></p>
+    <p><input type="submit" value="Añadir"></p>
 
-    </form>
-</body>
-</html>
+</form>
+
+<script>
+    function check()
+    {
+        const edTitulo = document.getElementById( "edTitulo" );
+        const edDescripcion = document.getElementById( "edDescripcion" );
+
+        return ( edTitulo.value.trim().length > 0
+            && edDescripcion.value.trim().length > 0 );
+    }
+
+</script>
+{% endblock %}

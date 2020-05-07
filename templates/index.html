@@ -1,25 +1,22 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Mutacritic</title>
-</head>
-<body>
-        <h1>Lista de videojuegos</h1>
-        
-        <p>
-        <a href="/videojuegos/nuevo">Añadir videojuego</a>
-        </p>
+{% extends "esqueleto.html" %}
 
-    {% if videojuegos.count() > 0 %}
-        {% for videojuego in videojuegos %}
+{% block contenido %}
+<h1>Lista de videojuegos</h1>
+        
+<p>
+    <a href="/videojuegos/nuevo">Añadir videojuego</a>
+</p>
+
+{% if videojuegos.count() > 0 %}
+    {% for videojuego in videojuegos %}
+        <div>
             <a href="comentarios/list?id={{ videojuego.key.urlsafe() }}">
-            <b>{{ videojuego.titulo}}</b> </a> {{videojuego.puntuacion}}
+            {% include "entrada_videojuego.html" %}
             (<a href="videojuegos/elimina?id={{ videojuego.key.urlsafe() }}">Borrar</a>)
             (<a href="videojuegos/modifica?id={{ videojuego.key.urlsafe() }}">Editar</a>)
-        {% endfor %}
-    {% else %}
-        <p><b>No hay videojuegos para valorar</b></p>
-    {% endif %}
-</body>
-</html>
+        </div>
+    {% endfor %}
+{% else %}
+    <p><b>No hay videojuegos para valorar</b></p>
+{% endif %}
+{% endblock %}
