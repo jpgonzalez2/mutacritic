@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aa59af7-9447-43b8-b5f6-0605a3bb657a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/handlers/videojuegos/elimina.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/handlers/videojuegos/modifica.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/modifica_videojuego.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/comentario.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/comentario.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/videojuego.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/videojuego.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +78,7 @@
       <workItem from="1588698651746" duration="2027000" />
       <workItem from="1588715152231" duration="100000" />
       <workItem from="1588759495803" duration="4690000" />
-      <workItem from="1588848976197" duration="4630000" />
+      <workItem from="1588848976197" duration="5174000" />
     </task>
     <servers />
   </component>
