@@ -6,6 +6,7 @@ from google.appengine.ext import ndb
 
 
 class Comentario(ndb.Model):
+    usuario = ndb.StringProperty(required=True)
     hora = ndb.DateTimeProperty(auto_now_add=True, indexed=True)
     puntuacion = ndb.IntegerProperty(required=True)
     texto = ndb.StringProperty(required=True)
