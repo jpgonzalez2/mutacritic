@@ -9,3 +9,12 @@ class Videojuego(ndb.Model):
     titulo = ndb.StringProperty(indexed=True)
     puntuacion = ndb.IntegerProperty()
     descripcion = ndb.StringProperty(required=True)
+
+    @staticmethod
+    def recupera(req):
+        try:
+            id = req.GET["id"]
+        except KeyError:
+            id = ""
+
+        return ndb.Key(urlsafe=id).get()

@@ -1,0 +1,43 @@
+{% extends "esqueleto.html" %}
+
+{% block contenido %}
+<form id="frmModificaVideojuego"
+      method="post"
+      action="/videojuegos/modifica"
+      onsubmit="return check()">
+
+    <h1>Edita el videojuego</h1>
+
+    <p>
+        <label for="edTitulo">Título: </label>
+        <input type="string" id="edTitulo" name="edTitulo"
+                value="{{ videojuego.titulo }}"/>
+    </p>
+
+    <p>
+        <label for="edPuntuacion">Puntuación: </label>
+        <input type="number" id="edPuntuacion" name="edPuntuacion" readonly
+                value="{{ videojuego.puntuacion }}"/>
+    </p>
+
+    <p>
+        <label for="edDescripcion">Descripción: </label>
+        <textarea rows="10" cols="50" id="edDescripcion" name="edDescripcion">{{ videojuego.descripcion }}</textarea>
+    </p>
+
+    <p><input type="submit" value="Editar"></p>
+
+</form>
+
+<script>
+    function check()
+    {
+        const edTitulo = document.getElementById( "edTitulo" );
+        const edDescripcion = document.getElementById( "edDescripcion" );
+
+        return ( edTitulo.value.trim().length > 0
+            && edDescripcion.value.trim().length > 0 );
+    }
+
+</script>
+{% endblock %}
