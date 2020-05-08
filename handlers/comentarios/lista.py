@@ -10,10 +10,11 @@ from model.comentario import Comentario
 
 class ListaComentariosHandler(webapp2.RequestHandler):
     def get(self):
-        comentarios = Comentario.recupera_para(self.request)
+        videojuego, comentarios = Comentario.recupera_para(self.request)
 
         valores_plantilla = {
-            "comentarios": comentarios
+            "comentarios": comentarios,
+            "videojuego": videojuego
         }
 
         jinja = jinja2.get_jinja2(app=self.app)

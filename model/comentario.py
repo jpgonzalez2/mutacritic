@@ -24,6 +24,15 @@ class Comentario(ndb.Model):
         if id_vdj:
             clave_videojuego = ndb.Key(urlsafe=id_vdj)
             comentarios = Comentario.query(Comentario.clave_videojuego == clave_videojuego)
-            return comentarios
+            return (clave_videojuego.get(), comentarios)
         else:
             print("ERROR: videojuego no encontrado")
+
+    @staticmethod
+    def recupera(req):
+        try:
+            id = req.GET["id"]
+        except KeyError:
+            id = ""
+
+        return ndb.Key(urlsafe=id).get()

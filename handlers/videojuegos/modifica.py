@@ -1,3 +1,4 @@
+# coding: utf-8
 # Modifica el videojuego
 
 
@@ -24,8 +25,13 @@ class ModificaVideojuegoHandler(webapp2.RequestHandler):
 
     def post(self):
         titulo = self.request.get("edTitulo", "")
-        puntuacion = int(self.request.get("edPuntuacion", "0"))
+        str_puntuacion = self.request.get("edPuntuacion", "0")
         descripcion = self.request.get("edDescripcion", "")
+
+        try:
+            puntuacion = int(str_puntuacion)
+        except ValueError:
+            puntuacion = -1
 
         if (not(titulo) or not(descripcion)):
             return self.redirect("videojuegos/modifica")

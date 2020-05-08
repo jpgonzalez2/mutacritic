@@ -1,0 +1,44 @@
+{% extends "esqueleto.html" %}
+
+{% block contenido %}
+<form id="frmNuevoComentario"
+      method="post"
+      action="/comentarios/nuevo?vdj={{ clave_videojuego.urlsafe() }}"
+      onsubmit="return check()">
+
+    <h1>Nuevo comentario</h1>
+
+    <p>
+        <label for="edUsuario">Usuario: </label>
+        <input type="text" id="edUsuario" name="edUsuario" readonly
+                value="ByPacoHD"/>
+    </p>
+
+    <p>
+        <label for="edPuntuacion">Puntuación(de 0 a 100): </label>
+        <input type="number" id="edPuntuacion" name="edPuntuacion" min="0" max="100"
+                placeholder="75"/>
+    </p>
+
+    <p>
+        <label for="edTexto">Texto: </label>
+        <textarea rows="10" cols="50" id="edTexto" name="edTexto"
+                  placeholder="Texto..."></textarea>
+    </p>
+
+    <p><input type="submit" value="Añadir"></p>
+
+</form>
+
+<script>
+    function check()
+    {
+        const edPuntuacion = document.getElementById( "edPuntuacion" );
+        const edTexto = document.getElementById( "edTexto" );
+
+        return ( edPuntuacion.value.trim().length > 0
+            && edTexto.value.trim().length > 0 );
+    }
+
+</script>
+{% endblock %}

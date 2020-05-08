@@ -1,10 +1,14 @@
 {% extends "esqueleto.html" %}
 
 {% block contenido %}
-<h1>Comentarios</h1>
+<h1>{{ videojuego.titulo }} - {{ videojuego.puntuacion }}/100</h1>
+
+<p>{{ videojuego.descripcion }}</p>
+
+<h2>Comentarios</h2>
         
 <p>
-    <a href="/comentarios/nuevo">Añadir comentario</a>
+    <a href="/comentarios/nuevo?vdj={{ videojuego.key.urlsafe() }}">Añadir comentario</a>
 </p>
 
 {% if comentarios.count() > 0 %}

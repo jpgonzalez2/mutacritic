@@ -1,4 +1,5 @@
-# Nuevo videojuego
+# coding: utf-8
+# Elimina el videojuego
 
 
 import webapp2
