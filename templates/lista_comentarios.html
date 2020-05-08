@@ -1,0 +1,21 @@
+{% extends "esqueleto.html" %}
+
+{% block contenido %}
+<h1>Comentarios</h1>
+        
+<p>
+    <a href="/comentarios/nuevo">Añadir comentario</a>
+</p>
+
+{% if comentarios.count() > 0 %}
+    {% for comentario in comentarios %}
+        <div>
+            {% include "entrada_comentario.html" %}
+            (<a href="comentarios/elimina?id={{ comentario.key.urlsafe() }}">Borrar</a>)
+            (<a href="comentarios/modifica?id={{ comentario.key.urlsafe() }}">Editar</a>)
+        </div>
+    {% endfor %}
+{% else %}
+    <p><b>No hay comentarios sobre este videojuego</b></p>
+{% endif %}
+{% endblock %}

@@ -21,6 +21,18 @@ handlers:
 - url: /videojuegos/elimina
   script: handlers.videojuegos.elimina.app
 
+- url: /comentarios/lista
+  script: handlers.comentarios.lista.app
+
+- url: /comentarios/elimina
+  script: handlers.comentarios.elimina.app
+
+- url: /comentarios/modifica
+  script: handlers.comentarios.modifica.app
+
+- url: /comentarios/nuevo
+  script: handlers.comentarios.nuevo.app
+
 libraries:
 - name: webapp2
   version: "2.5.2"

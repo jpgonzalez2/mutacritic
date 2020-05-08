@@ -10,7 +10,7 @@
 {% if videojuegos.count() > 0 %}
     {% for videojuego in videojuegos %}
         <div>
-            <a href="comentarios/list?id={{ videojuego.key.urlsafe() }}">
+            <a href="comentarios/lista?vdj={{ videojuego.key.urlsafe() }}">
             {% include "entrada_videojuego.html" %}
             (<a href="videojuegos/elimina?id={{ videojuego.key.urlsafe() }}">Borrar</a>)
             (<a href="videojuegos/modifica?id={{ videojuego.key.urlsafe() }}">Editar</a>)
