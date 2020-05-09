@@ -1,5 +1,6 @@
 {% extends "esqueleto.html" %}
 
+
 {% block contenido %}
 <h1>{{ videojuego.titulo }} - {{ videojuego.puntuacion }}/100</h1>
 
@@ -15,15 +16,16 @@
     {% for comentario in comentarios %}
         <div>
             <div>
-                <b>{{ comentario.usuario }}</b> {{ comentario.hora }} {{ comentario.puntaucion }}
-                (<a href="comentarios/elimina?id={{ comentario.key.urlsafe() }}">Borrar</a>)
-                (<a href="comentarios/modifica?id={{ comentario.key.urlsafe() }}">Editar</a>)
+                <b>{{ comentario.usuario }}</b> {{ comentario.hora.strftime("%A %d %B %Y %I:%M") }} <b>{{ comentario.puntuacion }}/100</b>
+                (<a href="/comentarios/elimina?id={{ comentario.key.urlsafe() }}&vdj={{ videojuego.key.urlsafe() }}">Borrar</a>)
+                (<a href="/comentarios/modifica?vdj={{ videojuego.key.urlsafe() }}&id={{ comentario.key.urlsafe() }}">Editar</a>)
             </div>
 
             <div>
                 {{ comentario.texto }}
             </div>
         </div>
+        <br>
     {% endfor %}
 {% else %}
     <p><b>No hay comentarios sobre este videojuego</b></p>

@@ -11,10 +11,11 @@ from model.comentario import Comentario
 
 class EliminaComentarioHandler(webapp2.RequestHandler):
     def get(self):
+        clave_videojuego = self.request.GET["vdj"]
         comentario = Comentario.recupera(self.request)
         comentario.key.delete()
         time.sleep(1)
-        return self.redirect("/")
+        return self.redirect("/comentarios/lista?vdj=" + clave_videojuego)
 
 app = webapp2.WSGIApplication([
     ('/comentarios/elimina', EliminaComentarioHandler)

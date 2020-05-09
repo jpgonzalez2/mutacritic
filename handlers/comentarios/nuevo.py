@@ -33,7 +33,7 @@ class NuevoComentarioHandler(webapp2.RequestHandler):
             puntuacion = -1
 
         if (not(puntuacion) or not(texto)):
-            return self.redirect("comentario/nuevo")
+            return self.redirect("/comentario/nuevo")
         else:
             comentario = Comentario(usuario=usuario,
                                     puntuacion=puntuacion,
