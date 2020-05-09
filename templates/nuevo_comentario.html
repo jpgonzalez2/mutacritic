@@ -3,7 +3,7 @@
 {% block contenido %}
 <form id="frmNuevoComentario"
       method="post"
-      action="/comentarios/nuevo?vdj={{ clave_videojuego.urlsafe() }}"
+      action="/comentarios/nuevo?vdj={{ clave_videojuego }}"
       onsubmit="return check()">
 
     <h1>Nuevo comentario</h1>

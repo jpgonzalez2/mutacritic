@@ -14,9 +14,15 @@
 {% if comentarios.count() > 0 %}
     {% for comentario in comentarios %}
         <div>
-            {% include "entrada_comentario.html" %}
-            (<a href="comentarios/elimina?id={{ comentario.key.urlsafe() }}">Borrar</a>)
-            (<a href="comentarios/modifica?id={{ comentario.key.urlsafe() }}">Editar</a>)
+            <div>
+                <b>{{ comentario.usuario }}</b> {{ comentario.hora }} {{ comentario.puntaucion }}
+                (<a href="comentarios/elimina?id={{ comentario.key.urlsafe() }}">Borrar</a>)
+                (<a href="comentarios/modifica?id={{ comentario.key.urlsafe() }}">Editar</a>)
+            </div>
+
+            <div>
+                {{ comentario.texto }}
+            </div>
         </div>
     {% endfor %}
 {% else %}
