@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8aa59af7-9447-43b8-b5f6-0605a3bb657a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/miestilo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/app.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/entrada_videojuego.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/esqueleto.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/esqueleto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/miestilo.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/miestilo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nuevo_videojuego.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nuevo_videojuego.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +86,7 @@
       <workItem from="1588848976197" duration="6749000" />
       <workItem from="1588933777800" duration="7120000" />
       <workItem from="1589018854388" duration="7259000" />
-      <workItem from="1589106229294" duration="2180000" />
+      <workItem from="1589106229294" duration="3140000" />
     </task>
     <servers />
   </component>

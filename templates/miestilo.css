@@ -1,0 +1,16 @@
+h1 {
+    align: center;
+}
+
+.formStyle {
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 4%;
+    text-align: left;
+    border: 1px solid;
+    border-color: #BBBBBB;
+    border-radius: 5px;
+}
