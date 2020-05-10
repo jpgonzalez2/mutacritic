@@ -18,7 +18,6 @@
             <div>
                 <b>{{ comentario.usuario }}</b> {{ comentario.hora.strftime("%A %d %B %Y %I:%M") }} <b>{{ comentario.puntuacion }}/100</b>
                 (<a href="/comentarios/elimina?id={{ comentario.key.urlsafe() }}&vdj={{ videojuego.key.urlsafe() }}">Borrar</a>)
-                (<a href="/comentarios/modifica?vdj={{ videojuego.key.urlsafe() }}&id={{ comentario.key.urlsafe() }}">Editar</a>)
             </div>
 
             <div>
