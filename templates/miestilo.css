@@ -1,4 +1,4 @@
-h1 {
+h2 {
     align: center;
 }
 
@@ -13,4 +13,13 @@ h1 {
     border: 1px solid;
     border-color: #BBBBBB;
     border-radius: 5px;
+}
+
+.boton {
+    display: block;
+    text-align: right;
+}
+
+.comentario {
+
 }

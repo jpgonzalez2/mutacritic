@@ -1,34 +1,43 @@
 {% extends "esqueleto.html" %}
 
 {% block contenido %}
+<div class="formStyle">
 <form id="frmNuevoComentario"
       method="post"
       action="/comentarios/nuevo?vdj={{ clave_videojuego }}"
       onsubmit="return check()">
 
-    <h1>Nuevo comentario</h1>
+    <h2>Nuevo comentario</h2>
 
-    <p>
-        <label for="edUsuario">Usuario: </label>
-        <input type="text" id="edUsuario" name="edUsuario" readonly
-                value="ByPacoHD"/>
-    </p>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="edUsuario">Usuario: </label>
+        <div class="col-sm-10">
+            <input class="form-control" type="text" id="edUsuario" name="edUsuario" readonly value="ByPacoHD"/>
+        </div>
+    </div>
 
-    <p>
-        <label for="edPuntuacion">Puntuación(de 0 a 100): </label>
-        <input type="number" id="edPuntuacion" name="edPuntuacion" min="0" max="100"
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="edPuntuacion">Puntuación(de 0 a 100): </label>
+        <div class="col-sm-10">
+            <input class="form-control" type="number" id="edPuntuacion" name="edPuntuacion" min="0" max="100"
                 placeholder="75"/>
-    </p>
+        </div>
+    </div>
 
-    <p>
-        <label for="edTexto">Texto: </label>
-        <textarea rows="10" cols="50" id="edTexto" name="edTexto"
-                  placeholder="Texto..."></textarea>
-    </p>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="edTexto">Texto: </label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="10" cols="50" id="edTexto" name="edTexto" placeholder="Texto..."></textarea>
+        </div>
+    </div>
 
-    <p><input type="submit" value="Añadir"></p>
+    <div class="boton">
+        <button class="btn btn-outline-primary" type="submit">Añadir</button>
+    </div>
+    <a href="/comentarios/lista?vdj={{ clave_videojuego }}" class="card-link">Volver</a>
 
 </form>
+</div>
 
 <script>
     function check()

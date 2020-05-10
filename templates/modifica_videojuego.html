@@ -1,33 +1,41 @@
 {% extends "esqueleto.html" %}
 
 {% block contenido %}
+<div class="formStyle">
 <form id="frmModificaVideojuego"
       method="post"
       action="/videojuegos/modifica"
       onsubmit="return check()">
 
-    <h1>Edita el videojuego</h1>
+    <h2>Edita el videojuego</h2>
 
-    <p>
-        <label for="edTitulo">Título: </label>
-        <input type="text" id="edTitulo" name="edTitulo"
-                value="{{ videojuego.titulo }}"/>
-    </p>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="edTitulo">Título: </label>
+        <div class="col-sm-10">
+            <input class="form-control" type="text" id="edTitulo" name="edTitulo" value="{{ videojuego.titulo }}"/>
+        </div>
+    </div>
 
-    <p>
-        <label for="edPuntuacion">Puntuación: </label>
-        <input type="number" id="edPuntuacion" name="edPuntuacion" readonly
-                value="{{ videojuego.puntuacion }}"/>
-    </p>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="edPuntuacion">Puntuación: </label>
+        <div class="col-sm-10">
+            <input class="form-control-plaintext" type="number" id="edPuntuacion" name="edPuntuacion" readonly value="{{ videojuego.puntuacion }}"/>
+        </div>
+    </div>
 
-    <p>
-        <label for="edDescripcion">Descripción: </label>
-        <textarea rows="10" cols="50" id="edDescripcion" name="edDescripcion">{{ videojuego.descripcion }}</textarea>
-    </p>
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" for="edDescripcion">Descripción: </label>
+        <div class="col-sm-10">
+            <textarea class="form-control" rows="10" cols="50" id="edDescripcion" name="edDescripcion">{{ videojuego.descripcion }}</textarea>
+        </div>
+    </div>
 
-    <p><input type="submit" value="Editar"></p>
+    <div class="boton">
+        <button class="btn btn-outline-primary" type="submit">Editar</button>
+    </div>
 
 </form>
+</div>
 
 <script>
     function check()

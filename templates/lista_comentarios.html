@@ -2,31 +2,33 @@
 
 
 {% block contenido %}
-<h1>{{ videojuego.titulo }} - {{ videojuego.puntuacion }}/100</h1>
 
-<p>{{ videojuego.descripcion }}</p>
 
-<h2>Comentarios</h2>
-        
-<p>
+<div class="container">
+    <h2>{{ videojuego.titulo }} - {{ videojuego.puntuacion }}/100</h2>
+
+    <p>{{ videojuego.descripcion }}</p>
+    <h3>Comentarios</h3>
     <a href="/comentarios/nuevo?vdj={{ videojuego.key.urlsafe() }}">Añadir comentario</a>
-</p>
+</div>
 
 {% if comentarios.count() > 0 %}
     {% for comentario in comentarios %}
-        <div>
+        <div class="comentario">
             <div>
-                <b>{{ comentario.usuario }}</b> {{ comentario.hora.strftime("%A %d %B %Y %I:%M") }} <b>{{ comentario.puntuacion }}/100</b>
-                (<a href="/comentarios/elimina?id={{ comentario.key.urlsafe() }}&vdj={{ videojuego.key.urlsafe() }}">Borrar</a>)
+                {{ comentario.usuario }} {{ comentario.hora.strftime("%A %d %B %Y %I:%M") }} {{ comentario.puntuacion }}/100
             </div>
 
             <div>
                 {{ comentario.texto }}
             </div>
+            <div>
+                (<a href="/comentarios/elimina?id={{ comentario.key.urlsafe() }}&vdj={{ videojuego.key.urlsafe() }}">Borrar</a>)
+            </div>
         </div>
         <br>
     {% endfor %}
-<a href="/">Página de inicio</a>
+<a href="/" class="card-link">Volver</a>
 {% else %}
     <p><b>No hay comentarios sobre este videojuego</b></p>
 {% endif %}

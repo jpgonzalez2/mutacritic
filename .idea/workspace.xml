@@ -4,7 +4,11 @@
     <list default="true" id="8aa59af7-9447-43b8-b5f6-0605a3bb657a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/esqueleto.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/esqueleto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lista_comentarios.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lista_comentarios.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/miestilo.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/miestilo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/modifica_videojuego.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/modifica_videojuego.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/nuevo_comentario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nuevo_comentario.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/nuevo_videojuego.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/nuevo_videojuego.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +90,7 @@
       <workItem from="1588848976197" duration="6749000" />
       <workItem from="1588933777800" duration="7120000" />
       <workItem from="1589018854388" duration="7259000" />
-      <workItem from="1589106229294" duration="3140000" />
+      <workItem from="1589106229294" duration="5724000" />
     </task>
     <servers />
   </component>
@@ -102,28 +106,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="861" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589107584273" />
-    <state width="914" height="181" key="GridCell.Tab.0.bottom" timestamp="1589108474729">
+    <state width="914" height="181" key="GridCell.Tab.0.bottom" timestamp="1589109488710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="181" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589108474729" />
-    <state width="914" height="181" key="GridCell.Tab.0.center" timestamp="1589108474729">
+    <state width="914" height="181" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1589109488710" />
+    <state width="914" height="181" key="GridCell.Tab.0.center" timestamp="1589109488710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="181" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589108474729" />
-    <state width="914" height="181" key="GridCell.Tab.0.left" timestamp="1589108474729">
+    <state width="914" height="181" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1589109488710" />
+    <state width="914" height="181" key="GridCell.Tab.0.left" timestamp="1589109488710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="181" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589108474729" />
-    <state width="914" height="181" key="GridCell.Tab.0.right" timestamp="1589108474729">
+    <state width="914" height="181" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1589109488710" />
+    <state width="914" height="181" key="GridCell.Tab.0.right" timestamp="1589109488710">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="914" height="181" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589108474729" />
+    <state width="914" height="181" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1589109488710" />
     <state x="584" y="161" key="SettingsEditor" timestamp="1588699689897">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="584" y="161" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1588699689897" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/mutacritic$mutacritic.coverage" NAME="mutacritic Coverage Results" MODIFIED="1589108474719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/mutacritic$mutacritic.coverage" NAME="mutacritic Coverage Results" MODIFIED="1589109488696" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
