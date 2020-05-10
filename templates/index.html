@@ -7,16 +7,28 @@
     <a href="/videojuegos/nuevo">Añadir videojuego</a>
 </p>
 
-{% if videojuegos.count() > 0 %}
-    {% for videojuego in videojuegos %}
-        <div>
-            <a href="comentarios/lista?vdj={{ videojuego.key.urlsafe() }}">
-            {% include "entrada_videojuego.html" %}
-            (<a href="videojuegos/elimina?id={{ videojuego.key.urlsafe() }}">Borrar</a>)
-            (<a href="videojuegos/modifica?id={{ videojuego.key.urlsafe() }}">Editar</a>)
-        </div>
-    {% endfor %}
-{% else %}
-    <p><b>No hay videojuegos para valorar</b></p>
-{% endif %}
+<table class="table table-striped">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">Videojuego</th>
+            <th scope="col">Puntuación</th>
+            <th scope="col">Opciones</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        {% if videojuegos.count() > 0 %}
+            {% for videojuego in videojuegos %}
+                <tr>
+                    <td><a href="comentarios/lista?vdj={{ videojuego.key.urlsafe() }}">
+                        {{ videojuego.titulo}}</b> </a></td>
+                    <td> {{videojuego.puntuacion}}/100</td>
+                    <td>
+                        (<a href="videojuegos/elimina?id={{ videojuego.key.urlsafe() }}">Borrar</a>)
+                        (<a href="videojuegos/modifica?id={{ videojuego.key.urlsafe() }}">Editar</a>)
+                    </td>
+            {% endfor %}
+        {% else %}
+            <p><b>No hay videojuegos para valorar</b></p>
+        {% endif %}
 {% endblock %}

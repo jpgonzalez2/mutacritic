@@ -14,24 +14,26 @@ handlers:
 
 - url: /videojuegos/nuevo
   script: handlers.videojuegos.nuevo.app
+  login: required
 
 - url: /videojuegos/modifica
   script: handlers.videojuegos.modifica.app
+  login: required
 
 - url: /videojuegos/elimina
   script: handlers.videojuegos.elimina.app
+  login: required
 
 - url: /comentarios/lista
   script: handlers.comentarios.lista.app
 
 - url: /comentarios/elimina
   script: handlers.comentarios.elimina.app
-
-- url: /comentarios/modifica
-  script: handlers.comentarios.modifica.app
+  login: required
 
 - url: /comentarios/nuevo
   script: handlers.comentarios.nuevo.app
+  login: required
 
 libraries:
 - name: webapp2
