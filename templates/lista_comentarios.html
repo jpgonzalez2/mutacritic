@@ -7,7 +7,7 @@
 <div class="container">
     <h2>{{ videojuego.titulo }} - {{ videojuego.puntuacion }}/100</h2>
 
-    <p>{{ videojuego.descripcion }}</p>
+    <p class="center">{{ videojuego.descripcion }}</p>
     <h3>Comentarios</h3>
     <a href="/comentarios/nuevo?vdj={{ videojuego.key.urlsafe() }}">Añadir comentario</a>
 </div>
@@ -16,20 +16,21 @@
     {% for comentario in comentarios %}
         <div class="comentario">
             <div>
-                {{ comentario.usuario }} {{ comentario.hora.strftime("%A %d %B %Y %I:%M") }} {{ comentario.puntuacion }}/100
+                <span class="usr">{{ comentario.usuario }}</span></span><span class="nota">{{ comentario.puntuacion }}/100</span><span class="hora">{{ comentario.hora.strftime("%A %d %B %Y %I:%M") }}
             </div>
 
-            <div>
+            <div class="texto">
                 {{ comentario.texto }}
             </div>
-            <div>
+            <div class="opcionComentario">
                 (<a href="/comentarios/elimina?id={{ comentario.key.urlsafe() }}&vdj={{ videojuego.key.urlsafe() }}">Borrar</a>)
             </div>
         </div>
         <br>
     {% endfor %}
-<a href="/" class="card-link">Volver</a>
+<a href="/" class="volver">Volver</a>
 {% else %}
-    <p><b>No hay comentarios sobre este videojuego</b></p>
+    <p class="vacio"><b>No hay comentarios sobre este videojuego</b></p>
+    <a href="/" class="volver">Volver</a>
 {% endif %}
 {% endblock %}

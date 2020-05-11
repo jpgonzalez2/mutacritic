@@ -35,6 +35,10 @@ handlers:
   script: handlers.comentarios.nuevo.app
   login: required
 
+- url: /templates
+  static_dir: templates
+  application_readable: yes
+
 libraries:
 - name: webapp2
   version: "2.5.2"

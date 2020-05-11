@@ -6,6 +6,7 @@
     <a href="/videojuegos/nuevo">Añadir videojuego</a>
 </div>
 
+<div class="tabla">
 <table class="table table-hover table-striped">
         <thead class="thead-light">
         <tr>
@@ -29,6 +30,7 @@
                 </tr>
             {% endfor %}
         {% else %}
-            <p><b>No hay videojuegos para valorar</b></p>
+            <p class="vacio"><b>No hay videojuegos para valorar</b></p>
         {% endif %}
+</div>
 {% endblock %}

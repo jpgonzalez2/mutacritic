@@ -10,15 +10,15 @@
     <h2>Nuevo comentario</h2>
 
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label" for="edUsuario">Usuario: </label>
-        <div class="col-sm-10">
+        <label class="col-sm-4 col-form-label" for="edUsuario">Usuario: </label>
+        <div class="col-sm-7">
             <input class="form-control" type="text" id="edUsuario" name="edUsuario" readonly value="ByPacoHD"/>
         </div>
     </div>
 
     <div class="form-group row">
-        <label class="col-sm-2 col-form-label" for="edPuntuacion">Puntuación(de 0 a 100): </label>
-        <div class="col-sm-10">
+        <label class="col-sm-4 col-form-label" for="edPuntuacion">Puntuación(de 0 a 100): </label>
+        <div class="col-sm-7">
             <input class="form-control" type="number" id="edPuntuacion" name="edPuntuacion" min="0" max="100"
                 placeholder="75"/>
         </div>
@@ -33,8 +33,9 @@
 
     <div class="boton">
         <button class="btn btn-outline-primary" type="submit">Añadir</button>
+        <a href="/comentarios/lista?vdj={{ clave_videojuego }}" class="btn btn-outline-secondary">Volver</a>
     </div>
-    <a href="/comentarios/lista?vdj={{ clave_videojuego }}" class="card-link">Volver</a>
+
 
 </form>
 </div>
