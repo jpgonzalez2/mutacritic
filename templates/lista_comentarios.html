@@ -2,14 +2,24 @@
 
 
 {% block contenido %}
-
+    {% if usr %}
+    <div class="log">
+        Puede hacer <a href="{{ url_usr }}">logout</a> siempre que lo desee.
+    </div>
+    {% else %}
+    <div class="log">
+        ¡Haga <a href="{{ url_usr }}">login</a> para poder comentar y valorar sus videojuegos favoritos!
+    </div>
+    {% endif %}
 
 <div class="container">
     <h2>{{ videojuego.titulo }} - {{ videojuego.puntuacion }}/100</h2>
 
     <p class="center">{{ videojuego.descripcion }}</p>
     <h3>Comentarios</h3>
+    {% if usr %}
     <a href="/comentarios/nuevo?vdj={{ videojuego.key.urlsafe() }}">Añadir comentario</a>
+    {% endif %}
 </div>
 
 {% if comentarios.count() > 0 %}
@@ -22,9 +32,13 @@
             <div class="texto">
                 {{ comentario.texto }}
             </div>
+            {% if usr %}
+                {% if usr.email()|string() == comentario.usuario or admin %}
             <div class="opcionComentario">
                 (<a href="/comentarios/elimina?id={{ comentario.key.urlsafe() }}&vdj={{ videojuego.key.urlsafe() }}">Borrar</a>)
             </div>
+                {% endif %}
+            {% endif %}
         </div>
         <br>
     {% endfor %}

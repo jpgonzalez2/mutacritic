@@ -1,11 +1,32 @@
 {% extends "esqueleto.html" %}
 
 {% block contenido %}
+    {% if admin %}
+        <div class="log">
+            Hola, {{ usr.email() }} cuando quieras haz <a href="{{ url_usr }}">logout</a>.
+        </div>
+    {% endif %}
+
+    {% if usr and not admin %}
+    <div class="log">
+        Puede hacer <a href="{{ url_usr }}">logout</a> siempre que lo desee.
+    </div>
+    {% else %}
+        {% if not admin %}
+        <div class="log">
+            ¡Haga <a href="{{ url_usr }}">login</a> para poder comentar y valorar sus videojuegos favoritos!
+        </div>
+        {% endif %}
+    {% endif %}
+
+
 <div class="container">
     <h2>Lista de videojuegos</h2>
+    {% if admin %}
     <a href="/videojuegos/nuevo">Añadir videojuego</a>
+    {% endif %}
 </div>
-
+        {% if videojuegos.count() > 0 %}
 <div class="tabla">
 <table class="table table-hover table-striped">
         <thead class="thead-light">
@@ -17,15 +38,18 @@
         </thead>
         <tbody>
 
-        {% if videojuegos.count() > 0 %}
+
             {% for videojuego in videojuegos %}
                 <tr>
                     <td><a href="comentarios/lista?vdj={{ videojuego.key.urlsafe() }}">
                         {{ videojuego.titulo}}</b> </a></td>
                     <td> {{videojuego.puntuacion}}/100</td>
                     <td>
+                        {% if admin %}
                         (<a href="videojuegos/elimina?id={{ videojuego.key.urlsafe() }}">Borrar</a>)
                         (<a href="videojuegos/modifica?id={{ videojuego.key.urlsafe() }}">Editar</a>)
+                        {% endif %}
+                        (<a href="comentarios/lista?vdj={{ videojuego.key.urlsafe() }}">Ver</a>)
                     </td>
                 </tr>
             {% endfor %}

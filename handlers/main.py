@@ -18,6 +18,7 @@
 
 import webapp2
 from webapp2_extras import jinja2
+from webapp2_extras.users import users
 
 
 from model.videojuego import Videojuego
@@ -25,10 +26,26 @@ from model.videojuego import Videojuego
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
+        usr = users.get_current_user()
+
+        if usr:
+            url_usr = users.create_logout_url("/")
+        else:
+            url_usr = users.create_login_url("/")
+
+        if users.is_current_user_admin():
+            admin = True
+        else:
+            admin = False
+
+
         videojuegos = Videojuego.query().order(Videojuego.titulo)
 
         valores_plantilla = {
-            "videojuegos": videojuegos
+            "videojuegos": videojuegos,
+            "usr": usr,
+            "url_usr": url_usr,
+            "admin": admin
         }
 
         jinja = jinja2.get_jinja2(app=self.app)

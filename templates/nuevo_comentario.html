@@ -12,14 +12,14 @@
     <div class="form-group row">
         <label class="col-sm-4 col-form-label" for="edUsuario">Usuario: </label>
         <div class="col-sm-7">
-            <input class="form-control" type="text" id="edUsuario" name="edUsuario" readonly value="ByPacoHD"/>
+            <input class="form-control" type="text" id="edUsuario" name="edUsuario" readonly value="{{ usr.email() }}"/>
         </div>
     </div>
 
     <div class="form-group row">
-        <label class="col-sm-4 col-form-label" for="edPuntuacion">Puntuación(de 0 a 100): </label>
+        <label class="col-sm-4 col-form-label" for="edPuntuacion">Puntuación(de 1 a 100): </label>
         <div class="col-sm-7">
-            <input class="form-control" type="number" id="edPuntuacion" name="edPuntuacion" min="0" max="100"
+            <input class="form-control" type="number" id="edPuntuacion" name="edPuntuacion" min="1" max="100"
                 placeholder="75"/>
         </div>
     </div>

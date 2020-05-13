@@ -106,3 +106,8 @@ p.center {
 .vacio {
     text-align: center;
 }
+
+.log {
+    margin-left: 30px;
+    margin-bottom: 30px;
+}

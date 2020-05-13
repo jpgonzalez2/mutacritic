@@ -6,6 +6,7 @@ import webapp2
 import time
 from webapp2_extras import jinja2
 from google.appengine.ext import ndb
+from webapp2_extras.users import users
 
 from model.comentario import Comentario
 from model.videojuego import Videojuego
@@ -13,8 +14,10 @@ from model.videojuego import Videojuego
 
 class NuevoComentarioHandler(webapp2.RequestHandler):
     def get(self):
+        usr = users.get_current_user()
         valores_plantilla = {
-            "clave_videojuego": self.request.GET["vdj"]
+            "clave_videojuego": self.request.GET["vdj"],
+            "usr": usr
         }
 
         jinja = jinja2.get_jinja2(app=self.app)
@@ -34,7 +37,7 @@ class NuevoComentarioHandler(webapp2.RequestHandler):
             puntuacion = -1
 
         if (not(puntuacion) or not(texto)):
-            return self.redirect("/comentario/nuevo")
+            return self.redirect("/comentarios/nuevo?vdj=" + clave_videojuego)
         else:
             comentario = Comentario(usuario=usuario,
                                     puntuacion=puntuacion,
