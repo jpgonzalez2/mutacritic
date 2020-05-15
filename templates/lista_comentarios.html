@@ -26,7 +26,8 @@
     {% for comentario in comentarios %}
         <div class="comentario">
             <div>
-                <span class="usr">{{ comentario.usuario }}</span></span><span class="nota">{{ comentario.puntuacion }}/100</span><span class="hora">{{ comentario.hora.strftime("%A %d %B %Y %I:%M") }}
+                <span class="usr">{{ comentario.usuario }}</span></span><span class="nota">{{ comentario.puntuacion }}/100</span><span class="hora">{{ comentario.hora.strftime("%A %d %B %Y %I:%M") }}</span>
+                <span class="edit">{% if comentario.editado %}Editado {% endif %}</span>
             </div>
 
             <div class="texto">
@@ -36,6 +37,7 @@
                 {% if usr.email()|string() == comentario.usuario or admin %}
             <div class="opcionComentario">
                 (<a href="/comentarios/elimina?id={{ comentario.key.urlsafe() }}&vdj={{ videojuego.key.urlsafe() }}">Borrar</a>)
+                (<a href="/comentarios/modifica?id={{ comentario.key.urlsafe() }}&vdj={{ videojuego.key.urlsafe() }}">Editar</a>)
             </div>
                 {% endif %}
             {% endif %}

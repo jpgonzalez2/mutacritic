@@ -13,6 +13,7 @@ class Comentario(ndb.Model):
     puntuacion = ndb.IntegerProperty(required=True)
     texto = ndb.StringProperty(required=True)
     clave_videojuego = ndb.KeyProperty(kind=Videojuego)
+    editado = ndb.BooleanProperty(required=True)
 
     @staticmethod
     def recupera_para(req):

@@ -1,49 +1,51 @@
 # coding: utf-8
-# Nuevo comentario
+# Modifica el videojuego
 
 
 import webapp2
 import time
 from webapp2_extras import jinja2
-from google.appengine.ext import ndb
-from webapp2_extras.users import users
 
 from model.comentario import Comentario
+from webapp2_extras.users import users
 
 
-class NuevoComentarioHandler(webapp2.RequestHandler):
+class ModificaComentarioHandler(webapp2.RequestHandler):
     def get(self):
         usr = users.get_current_user()
+        comentario = Comentario.recupera(self.request)
         valores_plantilla = {
             "clave_videojuego": self.request.GET["vdj"],
-            "usr": usr
+            "usr": usr,
+            "comentario": comentario,
+            "clave_comentario": self.request.GET["id"],
         }
 
         jinja = jinja2.get_jinja2(app=self.app)
         self.response.write(
-            jinja.render_template("nuevo_comentario.html",
+            jinja.render_template("modifica_comentario.html",
             **valores_plantilla))
 
     def post(self):
-        usuario = self.request.get("edUsuario", "")
         str_puntuacion = self.request.get("edPuntuacion", "")
         texto = self.request.get("edTexto", "")
         clave_videojuego = self.request.GET["vdj"]
-        editado = False
+        editado = True
+
+        comentario = Comentario.recupera(self.request)
 
         try:
             puntuacion = int(str_puntuacion)
         except ValueError:
             puntuacion = -1
 
-        if (not(puntuacion) or not(texto)):
-            return self.redirect("/comentarios/nuevo?vdj=" + clave_videojuego)
+        if (not (puntuacion) or not (texto)):
+            return self.redirect("/comentarios/modifica?vdj=" + clave_videojuego)
         else:
-            comentario = Comentario(usuario=usuario,
-                                    puntuacion=puntuacion,
-                                    texto=texto,
-                                    clave_videojuego=ndb.Key(urlsafe=clave_videojuego),
-                                    editado=editado)
+            comentario.puntuacion = puntuacion
+            comentario.texto = texto
+            comentario.editado = editado
+
             comentario.put()
             time.sleep(1)
 
@@ -58,9 +60,9 @@ class NuevoComentarioHandler(webapp2.RequestHandler):
             videojuego.put()
             time.sleep(1)
 
-            return self.redirect("/comentarios/lista?vdj=" + clave_videojuego)
+        return self.redirect("/comentarios/lista?vdj=" + clave_videojuego)
 
 
 app = webapp2.WSGIApplication([
-    ('/comentarios/nuevo', NuevoComentarioHandler)
+    ('/comentarios/modifica', ModificaComentarioHandler)
 ], debug=True)

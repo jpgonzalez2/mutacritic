@@ -59,17 +59,24 @@ p.center {
 }
 
 .usr {
-    font-size: 20px;
+    font-size: 24px;
     text-align: left;
 }
 
 .hora {
-    font-size: 10px;
+    font-size: 12px;
     margin-left: 20px;
 }
 
+.edit {
+    font-size: 14px;
+    margin-left: 20px;
+
+    font-style: oblique;
+}
+
 .nota {
-    font-size: 20px;
+    font-size: 24px;
     float: right;
 }
 
@@ -79,7 +86,8 @@ p.center {
 }
 
 .opcionComentario {
-    margin-left: 90%;
+    margin-left: 80%;
+    display: inline;
 }
 
 .volver {

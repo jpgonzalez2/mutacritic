@@ -22,7 +22,10 @@ class EliminaComentarioHandler(webapp2.RequestHandler):
         for comentario in comentarios:
             suma += int(comentario.puntuacion)
             cont += 1
-        res = suma / cont
+        if cont == 0:
+            res = 0
+        else:
+            res = suma / cont
         videojuego.puntuacion = res
         videojuego.put()
         time.sleep(1)
